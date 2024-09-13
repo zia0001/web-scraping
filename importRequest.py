@@ -10,7 +10,7 @@ if response.status_code == 200:#This attribute of the response object contains H
     html_content = response.text
     soup = BeautifulSoup(html_content, 'html.parser')
 
-    title = soup.title.text.strip() if soup.title else None
+    title = soup.title.text.strip()
     print("Title:", title)
 else:
     print("No HTML content, Page not accessible")
